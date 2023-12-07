@@ -1,1 +1,0 @@
-![vue-file-icons](https://img.kkbapps.com/logo/vue-file-icons.png)
