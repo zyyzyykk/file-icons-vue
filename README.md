@@ -50,7 +50,7 @@ export default {
 
 ### 🛸 预览：
 
-<img src="https://img.kkbapps.com/vue-file-icons-preview.png" alt="预览" style="zoom:80%;" />
+<img src="https://img.kkbapps.com/vue-file-icons-preview.png" alt="预览" style="zoom: 67%;" />
 
 ```vue
 <template>
