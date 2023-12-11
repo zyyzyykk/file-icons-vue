@@ -1,23 +1,23 @@
-# vue-file-icons
+# file-icons-vue
 
-> vue-file-icons，为 Vue.js 项目提供文件图标的npm依赖库
+> file-icons-vue，为 Vue.js 项目提供文件图标的npm依赖库
 >
-> vue-file-icons, a npm dependency package that provides file icons for Vue.js projects.
+> file-icons-vue, a npm dependency package that provides file icons for Vue.js projects.
 >
 > 作者：[zyyzyykk](https://github.com/zyyzyykk/)
 >
-> 源码：http://git.kkbapps.com/kk/vue-file-icons
+> 源码：http://git.kkbapps.com/kk/file-icons-vue
 >
-> npm地址：https://www.npmjs.com/package/vue-file-icons
+> npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2023-12-07
+> 更新时间：2023-12-11
 
 ### **⚡** 快速引入
 
 1.安装依赖：建议安装最新版
 
 ```sh
-npm i vue-file-icons
+npm i file-icons-vue
 ```
 
 2.在vue3项目中引入组件：
@@ -29,7 +29,7 @@ npm i vue-file-icons
 
 <script>
 // 引入文件图标组件
-import FileIcons from 'vue-file-icons'
+import FileIcons from 'file-icons-vue'
 
 export default {
   name: 'App',
@@ -50,20 +50,23 @@ export default {
 
 ### 🛸 预览：
 
-<img src="https://img.kkbapps.com/vue-file-icons-preview.png" alt="预览" style="zoom: 67%;" />
+![预览](https://img.kkbapps.com/file-icons-vue-preview1.png)
 
 ```vue
 <template>
   <template v-for="(file,index) in files" :key="index">
     <div style="display: flex; align-items: center;">
-      <div><FileIcons :name="file.name" width="20" height="20" :isFloder="file.isFloder" :style="{'float':'left','margin':'2px 10px'}" /></div>
+      <div>
+          <FileIcons :name="file.name" width="20" height="20" :isFloder="file.isFloder"
+            :style="{'float':'left','margin':'2px 10px'}" />
+      </div>
       <div>{{ file.name }}</div>
     </div>
   </template>
 </template>
 
 <script>
-import FileIcons from 'vue-file-icons'
+import FileIcons from 'file-icons-vue'
 
 export default {
   name: 'App',
@@ -129,7 +132,7 @@ export default {
 
 ### 💡 功能说明
 
-1.vue-file-icons是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。vue-file-icons提供了丰富的图标集，包括常见的文件类型和扩展名，可用于增强项目的可视化效果
+1.file-icons-vue是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。file-icons-vue提供了丰富的图标集，包括常见的文件类型和扩展名，可用于增强项目的可视化效果
 
 2.组件接收的props参数：
 
@@ -141,19 +144,15 @@ export default {
 | style    | Object  | 图标自定义样式 | 对象中的宽高属性会覆盖上面的width、height |
 | isFloder | Boolean | 是否为文件夹   | 默认值为false                             |
 
-3.vue-file-icons包含的全部图标：后续会持续更新
+3.file-icons-vue包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/vue-file-icons-all-icons.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue-all-icons.png)
 
 ### 👨‍💻 更新记录
 
-##### vue-file-icons@1.0.1 ：latest
+##### file-icons-vue@1.0.0 ：latest
 
-正式版1.0.1，实现基本功能
-
-##### vue-file-icons@1.0.0 ：
-
-提交官方仓库，测试使用
+正式版1.0.0，提交官方仓库，实现基本功能
 
 ### 🏘️ 关于此项目
 
