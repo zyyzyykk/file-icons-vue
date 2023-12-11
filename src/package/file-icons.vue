@@ -1,9 +1,11 @@
 <template>
-  <img ref="ImgRef" :src="iconUrl" :style="imgStyle" >
+  <img :src="icon" :style="imgStyle" >
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+// 引入全部图片
+const imgs = require.context('../assets/', false, /\.png$/);
 
 export default {
   name:'file-icons',
@@ -35,24 +37,28 @@ export default {
   
     // 解析文件后缀
     const suffix = ref('');
-    const base_addr = '../assets/';
-    const iconUrl = ref('');
+    const base_addr = './';
+    const icon = ref('');
     // 将文件名转为小写
     const fileName = props.name.toLowerCase();
   
     // 文件夹
     if(props.isFloder == true) {
-        iconUrl.value = base_addr + 'floder.png';
+      icon.value = imgs(base_addr + 'floder.png');
+    }
+    else if(fileName && fileName.length > 0) {
+      // 获取文件名后缀
+      let index = fileName.lastIndexOf('.');
+      if(index != -1) suffix.value = fileName.substring(index + 1);
+      else suffix.value = '';
+      try {
+        icon.value = imgs(base_addr + suffix.value + '.png');
+      } catch(error) {
+        // 图片不存在
+        icon.value = imgs(base_addr + 'kk.png');
       }
-      else if(fileName && fileName.length > 0) {
-        // 获取文件名后缀
-        let index = fileName.lastIndexOf('.');
-        if(index > 0) suffix.value = fileName.substring(index + 1);
-        else suffix.value = '';
-        // 图片存在
-        iconUrl.value = '../assets/' + suffix.value + '.png';
-      }
-      else iconUrl.value = base_addr + '.png';
+    }
+    else icon.value = imgs(base_addr + 'kk.png');
   
     // 图片样式
     const imgStyle = ref({
@@ -60,25 +66,14 @@ export default {
       height: props.height ? props.height + 'px' : '20px',
     })
   
-    // 用户传入自定义样式
+    // 传入的自定义样式
     if(props.style) {
       imgStyle.value = {...imgStyle.value,...props.style};
     }
   
-    const ImgRef = ref();
-    const setDefaultImage = () => {
-      ImgRef.value.src = base_addr + '.png';
-    }
-  
-    onMounted(() => {
-      ImgRef.value.onerror = setDefaultImage;
-    });
-  
     return {
-      iconUrl,
+      icon,
       imgStyle,
-      ImgRef,
-      setDefaultImage,
     }
   },
 }
@@ -87,4 +82,3 @@ export default {
 <style scoped>
 
 </style>
-  
