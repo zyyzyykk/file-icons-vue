@@ -1,12 +1,12 @@
 {
-  "name": "vue-file-icons",
+  "name": "file-icons-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./src/package/index.js --name vue-file-icons --dest vue-file-icons"
+    "package": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue --dest file-icons-vue"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -40,5 +40,10 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "> file-icons-vue，为 Vue.js 项目提供文件图标的npm依赖库 > > file-icons-vue, a npm dependency package that provides file icons for Vue.js projects. > > 作者：[zyyzyykk](https://github.com/zyyzyykk/) > > 源码：http://git.kkbapps.com/kk/file-icons-vue > > npm地址：https://www.npmjs.com/package/file-icons-vue > > 更新时间：2023-12-07",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
