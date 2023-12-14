@@ -132,7 +132,7 @@ export default {
 
 ### 💡 功能说明
 
-1.file-icons-vue是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。file-icons-vue提供了丰富的图标集，包括常见的文件类型和扩展名，可用于增强项目的可视化效果
+1.file-icons-vue是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。file-icons-vue提供了丰富的图标集，包括常见的文件类型和扩展名，用于增强项目的可视化效果
 
 2.组件接收的props参数：
 
@@ -150,7 +150,11 @@ export default {
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.0.0 ：latest
+##### file-icons-vue@1.0.2 ：latest
+
+新增 `.asm`、`.hpp`、`.json`图标，修改`.c`图标
+
+##### file-icons-vue@1.0.0 ：
 
 正式版1.0.0，提交官方仓库，实现基本功能
 
