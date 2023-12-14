@@ -146,7 +146,7 @@ export default {
 
 3.file-icons-vue包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue-all-icons.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue-all-icons-1.0.2.png)
 
 ### 👨‍💻 更新记录
 
