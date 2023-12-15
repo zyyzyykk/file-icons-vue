@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2023-12-11
+> 更新时间：2023-12-15
 
 ### **⚡** 快速引入
 
@@ -50,7 +50,7 @@ export default {
 
 ### 🛸 预览：
 
-![预览](https://img.kkbapps.com/file-icons-vue-preview1.png)
+![预览](https://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
 
 ```vue
 <template>
@@ -146,13 +146,17 @@ export default {
 
 3.file-icons-vue包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue-all-icons.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.0.4.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.0.2 ：latest
+##### file-icons-vue@1.0.4 ：latest
 
-新增 `.asm`、`.hpp`、`.json`图标，修改`.c`图标
+新增 `.bat`、`.cmd`、`.cs`、`.go`、`.ts` 图标
+
+##### file-icons-vue@1.0.2 ：
+
+新增 `.asm`、`.hpp`、`.json` 图标，修改 `.c` 图标
 
 ##### file-icons-vue@1.0.0 ：
 
