@@ -146,11 +146,15 @@ export default {
 
 3.file-icons-vue包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.0.4.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.0.5.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.0.4 ：latest
+##### file-icons-vue@1.0.5 ：latest
+
+新增 `.csv`、`.ico`、`.svg` 图标
+
+##### file-icons-vue@1.0.4 ：
 
 新增 `.bat`、`.cmd`、`.cs`、`.go`、`.ts` 图标
 
