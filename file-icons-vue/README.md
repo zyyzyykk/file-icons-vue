@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2023-12-15
+> 更新时间：2023-12-31
 
 ### **⚡** 快速引入
 
@@ -146,11 +146,15 @@ export default {
 
 3.file-icons-vue包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.0.5.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.0.8.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.0.5 ：latest
+##### file-icons-vue@1.0.8 ：latest
+
+新增 `.obj`、`.rtf`、`.wmf` 图标，修改 `.csv`、`.doc`、`.ppt` 、`.xls` 图标
+
+##### file-icons-vue@1.0.5 ：
 
 新增 `.csv`、`.ico`、`.svg` 图标
 
