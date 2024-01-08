@@ -155,7 +155,7 @@ export default {
 
 ##### file-icons-vue@1.1.0 ：
 
-新增 `.cc`、`.crt`、`.cxx`、`.epub`、`.htm`、`.ics`、`.jpeg`、`.lib`、`.lic`、`.log`、`.mobi`、`.otf`、`rb`、`.ttf` 图标
+新增 `.cc`、`.crt`、`.cxx`、`.epub`、`.htm`、`.ics`、`.jpeg`、`.lib`、`.lic`、`.log`、`.mobi`、`.otf`、`.rb`、`.ttf` 图标
 
 ##### file-icons-vue@1.0.8 ：
 
