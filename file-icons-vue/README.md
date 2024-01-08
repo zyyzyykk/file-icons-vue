@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-01-05
+> 更新时间：2024-01-08
 
 ### **⚡** 快速引入
 
@@ -131,7 +131,7 @@ export default {
 
 ### 💡 功能说明
 
-1.file-icons-vue是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。file-icons-vue提供了丰富的图标集，包括常见的文件类型和扩展名，用于增强项目的可视化效果
+1.`file-icons-vue` 是一个用于展示文件后缀对应图标的vue3组件，已打包并发布在npm仓库中。file-icons-vue提供了丰富的图标集，包括常见的文件类型和扩展名，用于增强项目的可视化效果
 
 2.组件接收的props参数：
 
@@ -143,15 +143,19 @@ export default {
 | style    | Object  | 图标自定义样式 | 对象中的宽高属性会覆盖上面的width、height |
 | isFloder | Boolean | 是否为文件夹   | 默认值为false                             |
 
-3.file-icons-vue包含的全部图标：后续会持续更新
+3.`file-icons-vue` 包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.0.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.3.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.1.0 ：latest
+##### file-icons-vue@1.1.3 ：latest
 
-新增 `.cc`、`.crt`、`.cxx`、`.epub`、`.htm`、`.ics`、`.jpeg` 、`.lib`、`.lic` 、`.log`、`.mobi` 、 `.otf`、`.rb`、`.ttf` 图标
+新增 `.apk`、`.eml`、`.jsx`、`.less`、`.ps1`、`.pyc`、`.sass`、`.scss`、`.tif`、`.tiff`、`.tsx`、`.vcf` 图标
+
+##### file-icons-vue@1.1.0 ：
+
+新增 `.cc`、`.crt`、`.cxx`、`.epub`、`.htm`、`.ics`、`.jpeg`、`.lib`、`.lic`、`.log`、`.mobi`、`.otf`、`rb`、`.ttf` 图标
 
 ##### file-icons-vue@1.0.8 ：
 
