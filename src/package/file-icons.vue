@@ -52,7 +52,9 @@ export default {
       if(index != -1) suffix.value = fileName.substring(index + 1);
       else suffix.value = '';
       try {
-        icon.value = imgs(base_addr + suffix.value + '.png');
+        // 特判 .floder 后缀
+        if(suffix.value == 'floder') icon.value = imgs(base_addr + 'kk.png');
+        else icon.value = imgs(base_addr + suffix.value + '.png');
       } catch(error) {
         // 图片不存在
         icon.value = imgs(base_addr + 'kk.png');
