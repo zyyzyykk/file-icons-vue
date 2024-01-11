@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-01-08
+> 更新时间：2024-01-12
 
 ### **⚡** 快速引入
 
@@ -145,17 +145,25 @@ export default {
 
 3.`file-icons-vue` 包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.3.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.5.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.1.3 ：latest
+##### file-icons-vue@1.1.5 ：latest
+
+新增 `.asp`、`.odp`、`.ods`、`.odt`、`.ova`、`.vmdk`、`.vmx` 图标，修改 `.mp3` 图标
+
+##### file-icons-vue@1.1.3 ：
 
 新增 `.apk`、`.eml`、`.jsx`、`.less`、`.ps1`、`.pyc`、`.sass`、`.scss`、`.tif`、`.tiff`、`.tsx`、`.vcf` 图标
 
 ##### file-icons-vue@1.1.0 ：
 
-新增 `.cc`、`.crt`、`.cxx`、`.epub`、`.htm`、`.ics`、`.jpeg`、`.lib`、`.lic`、`.log`、`.mobi`、`.otf`、`.rb`、`.ttf` 图标
+新增图标：
+
+```markdown
+.cc .crt .cxx .epub .htm .ics .jpeg .lib .lic .log .mobi .otf .rb .ttf
+```
 
 ##### file-icons-vue@1.0.8 ：
 
