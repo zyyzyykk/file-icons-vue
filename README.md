@@ -151,7 +151,7 @@ export default {
 
 ##### file-icons-vue@1.1.7 ：latest
 
-- 修复了将 `.floder` 后缀文件显示为文件夹图标的bug
+- 修复了将后缀为 `.floder` 的文件显示为文件夹图标的bug
 
 - 新增 `.ahk`、`.aspx`、`.bz2`、`.map`、`.pot`、`.pps`、`.psd`、`.vhdx`、`.xz` 图标
 
