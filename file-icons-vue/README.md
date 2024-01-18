@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-01-12
+> 更新时间：2024-01-18
 
 ### **⚡** 快速引入
 
@@ -48,7 +48,7 @@ export default {
 </style>
 ```
 
-### 🛸 预览：
+### 🛸 预览
 
 ![预览](https://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
 
@@ -145,11 +145,17 @@ export default {
 
 3.`file-icons-vue` 包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.5.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.7.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.1.5 ：latest
+##### file-icons-vue@1.1.7 ：latest
+
+- 修复了将 `.floder` 后缀文件显示为文件夹图标的bug
+
+- 新增 `.ahk`、`.aspx`、`.bz2`、`.map`、`.pot`、`.pps`、`.psd`、`.vhdx`、`.xz` 图标
+
+##### file-icons-vue@1.1.5 ：
 
 新增 `.asp`、`.odp`、`.ods`、`.odt`、`.ova`、`.vmdk`、`.vmx` 图标，修改 `.mp3` 图标
 
@@ -157,9 +163,7 @@ export default {
 
 新增 `.apk`、`.eml`、`.jsx`、`.less`、`.ps1`、`.pyc`、`.sass`、`.scss`、`.tif`、`.tiff`、`.tsx`、`.vcf` 图标
 
-##### file-icons-vue@1.1.0 ：
-
-新增图标：
+##### file-icons-vue@1.1.0 ：新增图标
 
 ```markdown
 .cc .crt .cxx .epub .htm .ics .jpeg .lib .lic .log .mobi .otf .rb .ttf
@@ -183,7 +187,7 @@ export default {
 
 ##### file-icons-vue@1.0.0 ：
 
-正式版1.0.0，提交官方仓库，实现基本功能
+正式版1.0.0，提交官方仓库，添加基本图标，实现基本功能
 
 ### 🏘️ 关于此项目
 
