@@ -1,5 +1,11 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.1.7 ：
+
+- 修复了将后缀为 `.floder` 的文件显示为文件夹图标的bug
+
+- 新增 `.ahk`、`.aspx`、`.bz2`、`.map`、`.pot`、`.pps`、`.psd`、`.vhdx`、`.xz` 图标
+
 ##### file-icons-vue@1.1.5 ：
 
 新增 `.asp`、`.odp`、`.ods`、`.odt`、`.ova`、`.vmdk`、`.vmx` 图标，修改 `.mp3` 图标
