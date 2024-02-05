@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-01-26
+> 更新时间：2024-02-06
 
 ### **⚡** 快速引入
 
@@ -145,19 +145,17 @@ export default {
 
 3.`file-icons-vue` 包含的全部图标：后续会持续更新
 
-![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.1.9.png)
+![所有图标](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.0.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.1.9 ：latest
+##### file-icons-vue@1.2.0 ：latest
+
+新增 `.cjs`、`.lst`、`.markdown`、`.vb`、`.vbs` 图标
+
+##### file-icons-vue@1.1.9 ：
 
 新增 `.ai`、`.dds`、`.emf`、`.heic`、`.heif`、`.m4a`、`.raw`、`.tga`、`.webp` 图标
-
-##### file-icons-vue@1.1.7 ：
-
-- 修复了将后缀为 `.floder` 的文件显示为文件夹图标的bug
-
-- 新增 `.ahk`、`.aspx`、`.bz2`、`.map`、`.pot`、`.pps`、`.psd`、`.vhdx`、`.xz` 图标
 
 ##### [历史更新记录](./UPDATE.md)
 
