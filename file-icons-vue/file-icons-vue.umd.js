@@ -1277,7 +1277,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=fb254466
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=9d04fdb0
 
 const _hoisted_1 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -1286,7 +1286,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.imgStyle)
   }, null, 12, _hoisted_1);
 }
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=fb254466
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=9d04fdb0
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=script&lang=js
 
@@ -1318,42 +1318,32 @@ const imgs = __webpack_require__(5675);
     }
   },
   setup(props) {
-    // 解析文件后缀
-    const suffix = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)('');
+    // 根据文件后缀获取图标
     const base_addr = './';
-    const icon = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)('');
-    // 将文件名转为小写
-    const fileName = props.name.toLowerCase();
-
-    // 文件夹
-    if (props.isFloder == true) {
-      icon.value = imgs(base_addr + 'floder.png');
-    } else if (fileName && fileName.length > 0) {
-      // 获取文件名后缀
-      let index = fileName.lastIndexOf('.');
-      if (index != -1) suffix.value = fileName.substring(index + 1);else suffix.value = '';
-      try {
-        // 特判 .floder 后缀
-        if (suffix.value == 'floder') icon.value = imgs(base_addr + 'kk.png');else icon.value = imgs(base_addr + suffix.value + '.png');
-      } catch (error) {
-        // 图片不存在
-        icon.value = imgs(base_addr + 'kk.png');
-      }
-    } else icon.value = imgs(base_addr + 'kk.png');
-
-    // 图片样式
-    const imgStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)({
-      width: props.width ? props.width + 'px' : '20px',
-      height: props.height ? props.height + 'px' : '20px'
+    const icon = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+      let suffix = '';
+      // 文件夹
+      if (props.isFloder == true) return imgs(base_addr + 'floder.png');else if (props.name && props.name.length > 0) {
+        // 获取文件名后缀
+        let index = props.name.lastIndexOf('.');
+        if (index != -1) suffix = props.name.substring(index + 1);else suffix = '';
+        try {
+          // 特判 .floder 后缀
+          if (suffix == 'floder') return imgs(base_addr + 'kk.png');else return imgs(base_addr + suffix + '.png');
+        } catch (error) {
+          // 图片不存在
+          return imgs(base_addr + 'kk.png');
+        }
+      } else return imgs(base_addr + 'kk.png');
     });
-
-    // 传入的自定义样式
-    if (props.style) {
-      imgStyle.value = {
-        ...imgStyle.value,
+    // 图标样式
+    const imgStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+      return {
+        width: props.width ? props.width + 'px' : '20px',
+        height: props.height ? props.height + 'px' : '20px',
         ...props.style
       };
-    }
+    });
     return {
       icon,
       imgStyle
