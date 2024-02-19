@@ -6,11 +6,11 @@
 >
 > 作者：[zyyzyykk](https://github.com/zyyzyykk/)
 >
-> 源码：http://git.kkbapps.com/kk/file-icons-vue
+> 源代码：https://github.com/zyyzyykk/file-icons-vue
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-02-06
+> 更新时间：2024-02-19
 
 ### **⚡** 快速引入
 
@@ -29,12 +29,12 @@ npm i file-icons-vue
 
 <script>
 // 引入文件图标组件
-import FileIcons from 'file-icons-vue'
+import FileIcons from 'file-icons-vue';
 
 export default {
   name: 'App',
   components: {
-    FileIcons,
+    FileIcons
   },
   setup() {
     return {
@@ -66,12 +66,12 @@ export default {
 </template>
 
 <script>
-import FileIcons from 'file-icons-vue'
+import FileIcons from 'file-icons-vue';
 
 export default {
   name: 'App',
   components: {
-    FileIcons,
+    FileIcons
   },
   setup() {
 
@@ -115,11 +115,11 @@ export default {
       {
         name: 'kk.kk',
         isFloder: false,
-      },
-    ]
+      }
+    ];
 
     return {
-      files,
+      files
     }
   }
 }
@@ -149,13 +149,13 @@ export default {
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.2.0 ：latest
+##### file-icons-vue@1.2.2 ：latest
+
+props参数变为响应式，例如当文件名改变时会自动变成对应图标
+
+##### file-icons-vue@1.2.0 ：
 
 新增 `.cjs`、`.lst`、`.markdown`、`.vb`、`.vbs` 图标
-
-##### file-icons-vue@1.1.9 ：
-
-新增 `.ai`、`.dds`、`.emf`、`.heic`、`.heif`、`.m4a`、`.raw`、`.tga`、`.webp` 图标
 
 ##### [历史更新记录](./UPDATE.md)
 
