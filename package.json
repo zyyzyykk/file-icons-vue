@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue --dest file-icons-vue"
+    "package": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue --dest file-icons-vue",
+    "package@min": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue@min --dest file-icons-vue@min"
   },
   "dependencies": {
     "core-js": "^3.8.3",
