@@ -6,6 +6,8 @@
 import { computed } from 'vue';
 // 引入全部图片
 const imgs = require.context('../assets/', false, /\.png$/);
+// 引入常用图片
+// const imgs = require.context('../assets@min/', false, /\.png$/);
 
 export default {
   name:'file-icons',
