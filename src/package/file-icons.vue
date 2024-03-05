@@ -78,4 +78,12 @@ export default {
 
 <style scoped>
 
+h1 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 </style>
