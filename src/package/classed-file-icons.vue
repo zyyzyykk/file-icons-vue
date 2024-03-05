@@ -172,7 +172,7 @@ onMounted(() => {
   if (node._rendered) {
     return
   } else {
-    console.log(toValue($prefix), toValue(ext), toValue($definedMap));
+    // console.log(toValue($prefix), toValue(ext), toValue($definedMap));
     if (isRef($props.el)) {
       whenever($props.el, (el) => {
         renderStyle(el)
