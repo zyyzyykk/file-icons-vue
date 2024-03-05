@@ -39,7 +39,7 @@ const $props = defineProps({
   },
   prefix: {
     type: String,
-    default: 'icon-'
+    default: 'icon'
   },
   name: {
     type: String,
@@ -54,9 +54,9 @@ const $props = defineProps({
     type: String,
     required: false,
   },
-  style: {
-    type: Object,
-  },
+  // style: {
+  //   type: Object,
+  // },
   isFloder: {
     type: Boolean,
     required: false,
@@ -78,7 +78,7 @@ const $prefix = computed(() => {
   if ($props.prefix) {
     return $props.prefix
   } else {
-    return "icon-"
+    return "icon"
   }
 })
 
@@ -152,20 +152,21 @@ let renderStyle = (el) => {
     let { ext, icon, url } = one;
     one._rendered = true;
     return `.${$prefix.value}-files-classed.icon-file-${ext} {
+  background-image: url(${url});
+}`
+  });
+  let commonText = `.${$prefix.value}-files-classed {
   display: inline-block;
   width: 1em;
   height: 1em;
   background-size: cover;
   background-attachment: local;
   background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(${url});
-}`
-  });
+}` 
   let styleVNode = h('style', {
     type: 'text/css',
     id: 'icon-files-classed-style',
-  }, cssTextList)
+  }, [commonText,...cssTextList])
   let $el = initEl(el);
   bindTo(styleVNode, $el);
 }

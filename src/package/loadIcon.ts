@@ -27,6 +27,7 @@ declare global {  //设置全局属性
 
 const imgs = require.context('../assets/', false, /\.png$/);
 
+const DEF_prefix = "icon";
 const DEF_floder = "floder";
 const DEF_null = "kk";
 const DEF_BasePath = "./";
@@ -136,7 +137,7 @@ const cachedIcon = ({ ext, icon, prefix }: IconNode): IconNode => {
 }
 
 const renderIconStyleText = ({ ext, url, prefix, icon }: IconNode): string => {
-    return `.${prefix}files-classed.icon-file-${ext} {
+    return `.${prefix}-files-classed.icon-file-${ext} {
         display: inline-block;
         width: 1em;
         height: 1em;
@@ -148,7 +149,19 @@ const renderIconStyleText = ({ ext, url, prefix, icon }: IconNode): string => {
     }`
 }
 
-const renderIconStyleDom = ($definedMap: IconCacheMap): VNode => {
+const renderIconStyleDom = ($definedMap: IconCacheMap, prefix?: string): VNode => {
+    if (!prefix) {
+        prefix = DEF_prefix;
+    }
+    const commonText = `.${prefix}-files-classed {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-size: cover;
+        background-attachment: local;
+        background-position: center;
+        background-repeat: no-repeat;
+    }`
     const textList = Object.values($definedMap).map(it => {
         if (!it._rendered) {
             it._rendered = true;
@@ -158,11 +171,14 @@ const renderIconStyleDom = ($definedMap: IconCacheMap): VNode => {
     const _vnode = h('style', {
         type: "text/css",
         id: "icon-files-classed-style"
-    }, textList)
+    }, [commonText, ...textList])
     return _vnode;
 }
 
-const renderForce = (el: HTMLElement | string, $definedMap: IconCacheMap): void => {
+const renderForce = (el: HTMLElement | string, $definedMap: IconCacheMap, prefix?: string): void => {
+    if (!prefix) {
+        prefix = DEF_prefix;
+    }
     const $el = getDom(el);
     const $vnode = renderIconStyleDom($definedMap);
     bindTo($vnode, $el);
@@ -171,7 +187,7 @@ const renderForce = (el: HTMLElement | string, $definedMap: IconCacheMap): void 
 
 const renderWithCache = (ext: string, el: HTMLElement | string, prefix?: string): void => {
     if (!prefix) {
-        prefix = "icon-";
+        prefix = DEF_prefix;
     }
     const $el = getDom(el)
     const $definedMap = getDefinedMap($el);
@@ -197,10 +213,14 @@ const renderInHead = (name: string, isFloder: boolean) => {
         name,
         isFloder
     })
-    renderWithCache(ext, head, "icon");
+    renderWithCache(ext, head, DEF_prefix);
 }
 
 export {
+    type IconNode,
+    type IconsPorps,
+    type CoverOption,
+    type IconCacheMap,
     $definedMap,
     getDom,
     getExt,
