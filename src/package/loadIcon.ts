@@ -157,7 +157,7 @@ const renderIconStyleDom = ($definedMap: IconCacheMap): VNode => {
     });
     const _vnode = h('style', {
         type: "text/css",
-        id: "classed-file-icons-style"
+        id: "icon-files-classed-style"
     }, textList)
     return _vnode;
 }
