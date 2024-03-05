@@ -117,7 +117,7 @@ let computedStyle = computed(() => {
 })
 
 let computedClass = computed(() => {
-  return [`${$prefix.value}-file-classed`, `icon-file-${ext.value}`]
+  return [`${$prefix.value}-files-classed`, `icon-file-${ext.value}`]
 })
 
 onBeforeMount(() => {
@@ -151,7 +151,10 @@ let renderStyle = (el) => {
   let cssTextList = Object.values($definedMap.value).map((one) => {
     let { ext, icon, url } = one;
     one._rendered = true;
-    return `.${$prefix.value}-file-classed.icon-file-${ext} {
+    return `.${$prefix.value}-files-classed.icon-file-${ext} {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
   background-size: cover;
   background-attachment: local;
   background-position: center;
@@ -161,7 +164,7 @@ let renderStyle = (el) => {
   });
   let styleVNode = h('style', {
     type: 'text/css',
-    id: 'icon-file-classed',
+    id: 'icon-files-classed-style',
   }, cssTextList)
   let $el = initEl(el);
   bindTo(styleVNode, $el);

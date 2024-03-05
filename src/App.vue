@@ -1,12 +1,14 @@
 <template>
-    <h1>
-        <ClassedFileIcons name="TESTfIASDFL.FE" :isFloder="true" ></ClassedFileIcons>
-        <ClassedFileIcons v-for="(f, idx) in fileList" :key="idx" :name="f"></ClassedFileIcons>
-    </h1>
-    <h3>
-        <ClassedFileIcons name="TESTfIASDFL.FE" :isFloder="true" ></ClassedFileIcons>
-        <ClassedFileIcons v-for="(f, idx) in fileList" :key="idx" :name="f"></ClassedFileIcons>
-    </h3>
+    <div>
+        <h1>
+            <ClassedFileIcons name="TESTfIASDFL.FE" :isFloder="true" ></ClassedFileIcons>
+            <ClassedFileIcons v-for="(f, idx) in fileList" :key="idx" :name="f"></ClassedFileIcons>
+        </h1>
+        <h3>
+            <ClassedFileIcons name="TESTfIASDFL.FE" :isFloder="true" ></ClassedFileIcons>
+            <ClassedFileIcons v-for="(f, idx) in fileList" :key="idx" :name="f"></ClassedFileIcons>
+        </h3>
+    </div>
 </template>
 
 <script setup>
