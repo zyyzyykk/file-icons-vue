@@ -27,9 +27,9 @@ export default {
       type:String,
       required:false,
     },
-    style:{
-      type:Object,
-    },
+    // style:{
+    //   type:Object,
+    // },
     isFloder:{
       type:Boolean,
       required:false,

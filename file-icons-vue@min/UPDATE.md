@@ -1,5 +1,40 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.10 :
+新增 `classed-file-icons` 组件。
+```
+import { ClassedFileIcons } from 'file-icons-vue'
+```
+
+新增 工具方法 
+`getDom` 
+`getExt` 
+`getIcon`
+`getDefinedMap`
+`cachedIcon`
+`renderForce` 
+`renderInHead`
+`renderWithCache`
+
+```
+import {
+    getDom,
+    getExt,
+    getIcon,
+    getDefinedMap,
+    cachedIcon,
+    renderForce,
+    renderInHead,
+    renderWithCache
+} from 'file-icons-vue'
+
+renderInHead("safe.txt")
+
+// 可以使用这种写法将一个元素变成图标
+// <div class="icon-files-classed icon-file-txt" ></div>
+
+```
+
 ##### file-icons-vue@1.1.9 ：
 
 新增 `.ai`、`.dds`、`.emf`、`.heic`、`.heif`、`.m4a`、`.raw`、`.tga`、`.webp` 图标

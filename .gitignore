@@ -21,3 +21,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+inspect.json
+
+image-map/img
+file-icons-vue/img
+file-icons-vue@min/img
