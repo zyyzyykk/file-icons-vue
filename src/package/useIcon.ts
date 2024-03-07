@@ -15,12 +15,11 @@ import {
 
 const useIcon = (props: IconsPorps) => {
 
-
     if (props.el == null) {
         props.el = document.head;
     }
     if (props.prefix == null) {
-        props.prefix = "icon";
+        props.prefix = "icons";
     }
 
     let $el = getDom(props.el);
@@ -32,9 +31,12 @@ const useIcon = (props: IconsPorps) => {
     onBeforeMount(() => {
         const ext = getExt(props);
         const icon = getIcon(ext);
-        cachedIcon({ icon, ext, prefix: props.prefix });
+        cachedIcon({ icon, ext, prefix: props.prefix }, $definedMap);
     })
     onMounted(() => {
+        const ext = getExt(props);
+        const prefix = props.prefix;
+        renderWithCache(ext, prefix, $el, $definedMap);
         renderForce($el, $definedMap)
     })
     onBeforeUnmount(() => {
@@ -53,7 +55,7 @@ const useIcon = (props: IconsPorps) => {
                 isFloder,
             }
             const ext = getExt(_props);
-            return renderWithCache(ext, $el, props.prefix)
+            return renderWithCache(ext, props.prefix, $el)
         }
     }
 }

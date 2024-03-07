@@ -19,8 +19,8 @@
         <p> renderInHead("xxx.mp4") </p>
         <div class="loadIcon">
             <textarea class="area">renderInHead("xxx.mp4")
-<div class="icon-files-classed icon-file-mp4"></div></textarea>
-            <div class="icon-files-classed icon-file-mp4"></div>
+<div class="icons-files-classed icon-file-mp4"></div></textarea>
+            <div class="icons-files-classed icon-file-mp4"></div>
             <NameSpan> xxx.mp4 </NameSpan>
         </div>
     </div>
@@ -33,7 +33,6 @@ import { FileIcons, ClassedFileIcons, renderInHead } from './package';
 import { ref, h } from 'vue';
 
 renderInHead("xxx.mp4")
-
 
 const NameSpan =
     (_ctx, { attrs, slots, emit }) =>

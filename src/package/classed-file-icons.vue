@@ -4,31 +4,8 @@
 
 <script setup>
 
-function base64ToUrl({ b64data = '', contentType = '', name = '', sliceSize = 512 } = {}) {
-  // 使用 atob() 方法将数据解码
-  let byteCharacters = atob(b64data);
-  let byteArrays = [];
-  for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-    let slice = byteCharacters.slice(offset, offset + sliceSize);
-    let byteNumbers = [];
-    for (let i = 0; i < slice.length; i++) {
-      byteNumbers.push(slice.charCodeAt(i));
-    }
-    // 8 位无符号整数值的类型化数组。内容将初始化为 0。
-    // 如果无法分配请求数目的字节，则将引发异常。
-    byteArrays.push(new Uint8Array(byteNumbers));
-  }
-  let result = new Blob(byteArrays, {
-    name,
-    type: contentType
-  })
-  return URL.createObjectURL(result)
-}
-
 import { computed, ref, onMounted, isRef, unref, defineProps, whenever, h, render as bindTo, onBeforeMount, toValue } from 'vue';
-
-// 引入全部图片
-const imgs = require.context('../assets/', false, /\.png$/);
+import { cachedIcon, getExt, getIcon, getCommonClassName, getExtClassName, renderWithCache, getDom, getDefinedMap } from './loadIcon';
 
 const $props = defineProps({
   el: {
@@ -39,7 +16,7 @@ const $props = defineProps({
   },
   prefix: {
     type: String,
-    default: 'icon'
+    default: 'icons'
   },
   name: {
     type: String,
@@ -63,48 +40,25 @@ const $props = defineProps({
   }
 })
 
-const DEF_floder = "floder";
-const DEF_null = "kk";
-const DEF_BasePath = "./";
-
-const $definedMap = ref({});
-if (window.$definedMap) {
-  $definedMap.value = window.$definedMap;
-} else {
-  window.$definedMap = $definedMap.value;
-}
-
 const $prefix = computed(() => {
-  if ($props.prefix) {
-    return $props.prefix
-  } else {
-    return "icon"
-  }
+  return toValue($props).prefix
+})
+
+const $el = computed(() => {
+  return getDom(toValue($props).el)
+})
+
+const $definedMap = computed(() => {
+  return getDefinedMap($el.value)
 })
 
 let ext = computed(() => {
   let props = unref($props);
-  if (props.isFloder) {
-    return DEF_floder
-  }
-  if (props.name && props.name.length) {
-    let index = props.name.lastIndexOf('.');
-    if (index != -1) {
-      let suffix = props.name.substring(index + 1);
-      if (suffix != DEF_floder) {
-        return suffix;
-      }
-    }
-  }
-  return DEF_null;
+  return getExt(props);
 })
 
 let icon = computed(() => {
-  try {
-    return imgs(DEF_BasePath + ext.value + '.png');
-  } catch (err) {
-    return imgs(DEF_BasePath + DEF_null + '.png');
-  }
+  return getIcon(ext.value);
 })
 
 let computedStyle = computed(() => {
@@ -117,75 +71,23 @@ let computedStyle = computed(() => {
 })
 
 let computedClass = computed(() => {
-  return [`${$prefix.value}-files-classed`, `icon-file-${ext.value}`]
+  let cname = getCommonClassName($prefix.value)
+  let ename = getExtClassName(ext.value)
+  return [cname, ename];
 })
 
 onBeforeMount(() => {
-  let b64data = icon.value.replace("data:image/png;base64,", "");
-  // let bf = Buffer.from(str, "base64");
-  let url = base64ToUrl({
-    name: `${ext.value}.png`,
-    b64data: b64data,
-    contentType: "image/png"
-  });
-  $definedMap.value[ext.value] = {
+  cachedIcon({
     ext: ext.value,
     icon: icon.value,
-    url,
-    _rendered: false
-  }
+    prefix: $prefix.value
+  }, $definedMap.value);
 });
 
-let initEl = (el) => {
-  if (el instanceof String) {
-    el = document.querySelector(el);
-    return el;
-  }
-  if (el instanceof HTMLElement) {
-    return el;
-  }
-  return document.head;
-}
-
-let renderStyle = (el) => {
-  let cssTextList = Object.values($definedMap.value).map((one) => {
-    let { ext, icon, url } = one;
-    one._rendered = true;
-    return `.${$prefix.value}-files-classed.icon-file-${ext} {
-  background-image: url(${url});
-}`
-  });
-  let commonText = `.${$prefix.value}-files-classed {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-size: cover;
-  background-attachment: local;
-  background-position: center;
-}` 
-  let styleVNode = h('style', {
-    type: 'text/css',
-    id: 'icon-files-classed-style',
-  }, [commonText,...cssTextList])
-  let $el = initEl(el);
-  bindTo(styleVNode, $el);
-}
-
 onMounted(() => {
-  let node = $definedMap.value[ext.value];
-  if (node._rendered) {
-    return
-  } else {
-    // console.log(toValue($prefix), toValue(ext), toValue($definedMap));
-    if (isRef($props.el)) {
-      whenever($props.el, (el) => {
-        renderStyle(el)
-      })
-    } else {
-      renderStyle($props.el);
-    }
-  }
+  renderWithCache(ext.value, $prefix.value, $el.value, $definedMap.value);
 })
+
 </script>
 
 <style scoped>
