@@ -1,6 +1,6 @@
 {
-  "name": "file-icons-vue-min",
-  "version": "1.0.2",
+  "name": "file-icons-vue",
+  "version": "1.2.5",
   "description": "file-icons-vue，为 Vue.js 项目提供文件图标的npm依赖库。file-icons-vue, a npm dependency package that provides file icons for Vue.js projects.",
   "main": "file-icons-vue.common.js",
   "scripts": {
