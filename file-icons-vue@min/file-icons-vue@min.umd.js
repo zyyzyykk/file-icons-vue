@@ -63,7 +63,7 @@ var map = {
 	"./doc.png": 4155,
 	"./docx.png": 8772,
 	"./exe.png": 4495,
-	"./floder.png": 172,
+	"./folder.png": 4731,
 	"./gif.png": 8327,
 	"./gitignore.png": 8489,
 	"./go.png": 631,
@@ -357,7 +357,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABX
 
 /***/ }),
 
-/***/ 172:
+/***/ 4731:
 /***/ (function(module) {
 
 "use strict";
@@ -953,7 +953,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=3f9c72d8
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=3017d206
 
 const _hoisted_1 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -962,7 +962,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.imgStyle)
   }, null, 12, _hoisted_1);
 }
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=3f9c72d8
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=3017d206
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=script&lang=js
 
@@ -990,7 +990,7 @@ const imgs = __webpack_require__(5435);
     style: {
       type: Object
     },
-    isFloder: {
+    isFolder: {
       type: Boolean,
       required: false
     }
@@ -1001,13 +1001,13 @@ const imgs = __webpack_require__(5435);
     const icon = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       let suffix = '';
       // 文件夹
-      if (props.isFloder == true) return imgs(base_addr + 'floder.png');else if (props.name && props.name.length > 0) {
+      if (props.isFolder == true) return imgs(base_addr + 'folder.png');else if (props.name && props.name.length > 0) {
         // 获取文件名后缀
         let index = props.name.lastIndexOf('.');
         if (index != -1) suffix = props.name.substring(index + 1);else suffix = '';
         try {
-          // 特判 .floder 后缀
-          if (suffix == 'floder') return imgs(base_addr + 'kk.png');else return imgs(base_addr + suffix + '.png');
+          // 特判 .folder 后缀
+          if (suffix == 'folder') return imgs(base_addr + 'kk.png');else return imgs(base_addr + suffix + '.png');
         } catch (error) {
           // 图片不存在
           return imgs(base_addr + 'kk.png');
