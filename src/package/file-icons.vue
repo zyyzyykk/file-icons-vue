@@ -30,7 +30,7 @@ export default {
     style:{
       type:Object,
     },
-    isFloder:{
+    isFolder:{
       type:Boolean,
       required:false,
     }
@@ -42,15 +42,15 @@ export default {
     const icon = computed(() => {
       let suffix = '';
       // 文件夹
-      if(props.isFloder == true) return imgs(base_addr + 'floder.png');
+      if(props.isFolder == true) return imgs(base_addr + 'folder.png');
       else if(props.name && props.name.length > 0) {
         // 获取文件名后缀
         let index = props.name.lastIndexOf('.');
         if(index != -1) suffix = props.name.substring(index + 1);
         else suffix = '';
         try {
-          // 特判 .floder 后缀
-          if(suffix == 'floder') return imgs(base_addr + 'kk.png');
+          // 特判 .folder 后缀
+          if(suffix == 'folder') return imgs(base_addr + 'kk.png');
           else return imgs(base_addr + suffix + '.png');
         } catch(error) {
           // 图片不存在
