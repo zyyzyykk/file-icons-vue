@@ -27,7 +27,7 @@ npm i file-icons-vue-min
 
 ```vue
 <template>
-  <FileIcons name="test.txt" width="30" height="30" :isFloder="false" :style="{'float':'right'}" />
+  <FileIcons name="test.txt" width="30" height="30" :isFolder="false" :style="{'float':'right'}" />
 </template>
 
 <script>
@@ -38,11 +38,6 @@ export default {
   name: 'App',
   components: {
     FileIcons
-  },
-  setup() {
-    return {
-      
-    }
   }
 }
 </script>
@@ -67,13 +62,13 @@ export default {
 | width    | String  | 图标宽度(px)   | 默认值为20px                              |
 | height   | String  | 图标高度(px)   | 默认值为20px                              |
 | style    | Object  | 图标自定义样式 | 对象中的宽高属性会覆盖上面的width、height |
-| isFloder | Boolean | 是否为文件夹   | 默认值为false                             |
+| isFolder | Boolean | 是否为文件夹   | 默认值为false                             |
 
 3.`file-icons-vue` 包含的全部图标：后续会持续更新
 
-![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.5-1.png)
+![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.6-1.png)
 
-![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.5-2.png)
+![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.6-2.png)
 
 4.`file-icons-vue-min` 包含的常用图标：
 
@@ -81,7 +76,11 @@ export default {
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.2.5 ：latest
+##### file-icons-vue@1.2.6 ：latest
+
+纠正组件props参数的拼写错误：由 **isFloder** 修改为 **isFolder**
+
+##### file-icons-vue@1.2.5 ：
 
 新增 `.dtd`、`.ppa`、`.pwz`、`.ras`、`.vdx`、`.vsd`、`.wiz`、`.wmv`、`.wsdl`、`.xhtml`、`.xsl` 图标
 
