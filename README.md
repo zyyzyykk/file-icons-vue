@@ -12,6 +12,17 @@
 >
 > 更新时间：2024-03-01
 
+<p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/file-icons-vue"><img src="https://img.shields.io/badge/npm_install-1k+-red" alt="Npm Install"></a>
+  <a href="https://cn.vuejs.org/"><img src="https://img.shields.io/badge/vue-3.x-green?color=42b883" alt="Vue Version"></a>
+  <a href="https://www.apache.org/licenses/"><img src="https://img.shields.io/badge/licence-Apache-orange" alt="Apache Licence"></a>
+  <a href="https://www.python.org/downloads/release/python-3111/"><img src="https://img.shields.io/badge/python-3.11-blue" alt="Python Version"></a>
+  <a href="https://github.com/zyyzyykk/file-icons-vue"><img src="https://img.shields.io/badge/gitHub_star-5+-yellow" alt="GitHub"></a>
+</p>
+
+
 ### **⚡** 快速引入
 
 1.安装依赖：建议安装最新版
@@ -27,7 +38,10 @@ npm i file-icons-vue-min
 
 ```vue
 <template>
-  <FileIcons name="test.txt" width="30" height="30" :isFolder="false" :style="{'float':'right'}" />
+  <FileIcons 
+     name="test.txt" width="30" height="30" 
+     :isFolder="false" :style="{'float':'right'}" 
+  />
 </template>
 
 <script>
@@ -78,7 +92,7 @@ export default {
 
 ##### file-icons-vue@1.2.6 ：latest
 
-纠正组件props参数的拼写错误：由 **isFloder** 修改为 **isFolder**
+纠正组件props参数的拼写错误：由 isFloder 修改为 **isFolder**
 
 ##### file-icons-vue@1.2.5 ：
 
