@@ -10,16 +10,16 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-03-01
+> 更新时间：2024-04-29
 
 <p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/file-icons-vue"><img src="https://img.shields.io/badge/npm_install-1k+-red" alt="Npm Install"></a>
   <a href="https://cn.vuejs.org/"><img src="https://img.shields.io/badge/vue-3.x-green?color=42b883" alt="Vue Version"></a>
-  <a href="https://www.apache.org/licenses/"><img src="https://img.shields.io/badge/licence-Apache-orange" alt="Apache Licence"></a>
   <a href="https://www.python.org/downloads/release/python-3111/"><img src="https://img.shields.io/badge/python-3.11-blue" alt="Python Version"></a>
-  <a href="https://github.com/zyyzyykk/file-icons-vue"><img src="https://img.shields.io/badge/gitHub_star-5+-yellow" alt="GitHub"></a>
+  <a href="https://www.apache.org/licenses/"><img src="https://img.shields.io/badge/licence-Apache-orange" alt="Apache Licence"></a>
+  <a href="https://github.com/zyyzyykk/file-icons-vue"><img src="https://img.shields.io/badge/gitHub_star-10+-yellow" alt="GitHub"></a>
 </p>
 
 
@@ -78,19 +78,23 @@ export default {
 | style    | Object  | 图标自定义样式 | 对象中的宽高属性会覆盖上面的width、height |
 | isFolder | Boolean | 是否为文件夹   | 默认值为false                             |
 
-3.`file-icons-vue` 包含的全部图标：后续会持续更新
+3.`file-icons-vue` 包含的全部图标：
 
-![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.6-1.png)
+![file-icons-vue的所有图标-1](https://img.kkbapps.com/file-icons-vue/1.2.7-1.png)
 
-![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-all-icons-1.2.6-2.png)
+![file-icons-vue的所有图标-2](https://img.kkbapps.com/file-icons-vue/1.2.7-2.png)
 
 4.`file-icons-vue-min` 包含的常用图标：
 
-![所有图标-1](https://img.kkbapps.com/file-icons-vue/file-icons-vue-min-all-icons-1.0.2.png)
+![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.5-min.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.2.6 ：latest
+##### file-icons-vue@1.2.7 ：latest
+
+新增 `.dot`、`.env`、`.mk`、`.tgz` 图标
+
+##### file-icons-vue@1.2.6 ：
 
 纠正组件props参数的拼写错误：由 isFloder 修改为 **isFolder**
 
@@ -101,10 +105,6 @@ export default {
 ##### file-icons-vue@1.2.2 ：
 
 props参数变为响应式，例如当文件名改变时会自动变成对应图标
-
-##### file-icons-vue@1.2.0 ：
-
-新增 `.cjs`、`.lst`、`.markdown`、`.vb`、`.vbs` 图标
 
 ##### [历史更新记录](./UPDATE.md)
 
