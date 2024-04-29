@@ -1,5 +1,9 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.0 ：
+
+新增 `.cjs`、`.lst`、`.markdown`、`.vb`、`.vbs` 图标
+
 ##### file-icons-vue@1.1.9 ：
 
 新增 `.ai`、`.dds`、`.emf`、`.heic`、`.heif`、`.m4a`、`.raw`、`.tga`、`.webp` 图标
