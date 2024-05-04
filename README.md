@@ -86,7 +86,7 @@ export default {
 
 4.`file-icons-vue-min` 包含的常用图标：
 
-![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.5-min.png)
+![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.5-min-2.png)
 
 ### 👨‍💻 更新记录
 
