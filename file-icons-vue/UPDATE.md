@@ -1,5 +1,9 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.2 ：
+
+props参数变为响应式，例如当文件名改变时会自动变成对应图标
+
 ##### file-icons-vue@1.2.0 ：
 
 新增 `.cjs`、`.lst`、`.markdown`、`.vb`、`.vbs` 图标
