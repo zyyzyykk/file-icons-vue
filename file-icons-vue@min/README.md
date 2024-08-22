@@ -10,7 +10,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-04-29
+> 更新时间：2024-08-22
 
 <p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
@@ -40,7 +40,7 @@ npm i file-icons-vue-min
 <template>
   <FileIcons 
      name="test.txt" width="30" height="30" 
-     :isFolder="false" :style="{'float':'right'}" 
+     :isFolder="false" :isMulti="false" :style="{'float':'right'}" 
   />
 </template>
 
@@ -77,20 +77,25 @@ export default {
 | height   | String  | 图标高度(px)   | 默认值为20px                              |
 | style    | Object  | 图标自定义样式 | 对象中的宽高属性会覆盖上面的width、height |
 | isFolder | Boolean | 是否为文件夹   | 默认值为false                             |
+| isMulti  | Boolean | 是否为多文件   | 默认值为false                             |
 
 3.`file-icons-vue` 包含的全部图标：
 
-![file-icons-vue的所有图标-1](https://img.kkbapps.com/file-icons-vue/1.2.7-1.png)
+![file-icons-vue的所有图标-1](https://img.kkbapps.com/file-icons-vue/1-1.2.8.png)
 
-![file-icons-vue的所有图标-2](https://img.kkbapps.com/file-icons-vue/1.2.7-2.png)
+![file-icons-vue的所有图标-2](https://img.kkbapps.com/file-icons-vue/2-1.2.8.png)
 
 4.`file-icons-vue-min` 包含的常用图标：
 
-![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.5-min.png)
+![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.6-min.png)
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.2.7 ：latest
+##### file-icons-vue@1.2.8 ：latest
+
+新增 `isMulti` 属性，支持多文件显示
+
+##### file-icons-vue@1.2.7 ：
 
 新增 `.dot`、`.env`、`.mk`、`.tgz` 图标
 
@@ -101,10 +106,6 @@ export default {
 ##### file-icons-vue@1.2.5 ：
 
 新增 `.dtd`、`.ppa`、`.pwz`、`.ras`、`.vdx`、`.vsd`、`.wiz`、`.wmv`、`.wsdl`、`.xhtml`、`.xsl` 图标
-
-##### file-icons-vue@1.2.2 ：
-
-props参数变为响应式，例如当文件名改变时会自动变成对应图标
 
 ##### [历史更新记录](./UPDATE.md)
 

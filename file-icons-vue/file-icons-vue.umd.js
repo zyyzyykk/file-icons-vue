@@ -112,6 +112,7 @@ var map = {
 	"./mp3.png": 567,
 	"./mp4.png": 7633,
 	"./msi.png": 7282,
+	"./multi.png": 54,
 	"./obj.png": 6772,
 	"./odp.png": 642,
 	"./ods.png": 363,
@@ -800,6 +801,14 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABX
 
 /***/ }),
 
+/***/ 54:
+/***/ (function(module) {
+
+"use strict";
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABCCAYAAAAGysWEAAAJnElEQVR4nO2b22/bRhbGf7yT4kWWLClyq7WySB4KZJEC7Uv7/6N9aLHJOm3cQEVqO3YM25UvkhVdyZl9kEhbti4U5SRdbD/AsDg3zjdn5juHw6EipeT/Afo6lX/++WfZbDYfqi/3EIYh3333Hfl8HsMwUBRFydrWWkSvr6+p1+vkg2CdZqYgpERKyWg04vDwkB9++IHnz5+ztbWFbdsyK9m1iMbY3Nx8iGYAiIQgiiI6nQ6mYXB9fc1vu7tomka1WsWyrEztPghRXb/fTJa1HwmR1NU0jWKxSBRFnJyc8Msvv2CaJuVyWeq6vrJV1ZV7cweKojzQ37ituE1d1zEti263S7lc5rrd5sWLF1xcXBCG4cqjmNqizWZT7u7uTqV1Oh2klLSvr+9XWNmiEkXVUBQFVVXHRE2Tbq/Ho0ePkMD7oyN2d1/z/PnX5PN5qWlaasumJvru3Ts2NzdRVTUZ+UqlAsDp6emKpMa4Pb2FEJimSRAEOI6DpmkYhgGAZdtsbW0xGg7Z39unUChiWRa5XC61OK20RqMo4lGlMnNNZoGQEiEEg8GA4+NjGo0GtVqNWq2G53lJOcuy0HWd6tYWURTx6tUrdF2nXq+Ty+WkqqpLya7UYykljuMkI70OhJREUUQURQghcGwbx7a5urzE0HVEpYKmaUgpsSwL27ZRFAUxKb+zs8NoNOLJkye4rruU7Mqm0TQNTdOm0rIorBRR8ltVVXzfJ5/P02q3OT8/B0WhUCgghMAwDBzHASAqFFAUhfDggEajgW3b1Ov1pT52bdV9COi6jmXbtFotgknwcXx8zNnZGVEUJeJk2za+7xPk8/zz8WNEFPH69etYiRffY1bi+fm5/PHHH1HVm3HQNI1arcbJ6elUOpBBYUE3DCzLwjRNNE3DsiwkxCLDxfk5+/t7XF5eMhwOURQFwzCQUuJ5HlJKtre3efvHH/z00098//33lEqluT52JtFer0e1WqVUKqUTnhTCJyehnZSS63abD90u+XyeUqmUqKyiKJimied5RGFIq9ViNBrx9u1bWq0Wuq4jJpFTr9cbT++NDU7Pznjz5g3ffPMNvu/PnMJzWYRhSD4IyOVyy4mmgBCCMIoIw5DW1RXv37/nut1G13V0XUdVVaSUmKaJ4zgUikWklFy1Wrx69YogCPB9Pw7uk8ELgoDrTodGo8GTJ0/miuVCc2mads+iWYRHTEK7GH4QUPvySy4vLzk8PEQIQbVaBcA0TVzXRVVVoijiX8+esbe/z8bGBrVajWKxmERTw+GQ0XCI63k0Gg3Ozs7wPI8gCO4FEwuJxg2uBzlu41Z45zgOYRhimiZIyfHxMbquMxqNkkBBTnwswJejEdftNldXV4k6x+t6OBximCbNZjMJanK53D3P8DCefwHJ24hFzLIsBsMhlm1j6DrN83MODw/pdDpEUYSmaeNBYDwbyuUy/X6fq6vLcWhoGLium5QzDAM3l+P4+JjBYHBvBsFHcS/y1t/4n6Ioif+NLRF3sri5yWaxyP7+Hs1mk263ixAicSmu6+I4Dl988QW6prG3t8fp2Smj0Qi4WV6GYWDbNrquz5yFH9miN1C4sWg84nHn8hsbPH36lN9+e8PLly/Z29vDdd2kw2EYEoYhqqLgOg47Ozv4nsdmqYyu64lu9Pt9RqPRTB1ZkegyIbqx4t2Scadv+2Bd18nlckneP2odzv78k263i+u6+L6f5AkhUBWFwWBAb9Dn/OKCXM7F8zyUiWKHYYgQYh2ictzxhTznk0zITgirmpZMTcdxEtfy+PHjsa+UkmKxSK1WwzRNVFVlOBzS7/fpdrtYlsXp2RmBH2DbNpZ9s+sQ++q7+KwhYKywlmXheR4516W6tYUUgoODA85OTxHROCaOQ8B8Pk+pXObw8JCLy0tGw0Gqe6Ww6AIT3S6TtmhSRU49ZMehnRCCUrnMebPJ2z/eohs6pVIJwzATMRNCYOg6ahw4iJu25rnDJUTlgs5Pp6aLI6YLXV5ecnR0hLz1yNbr9RIX02/3+f3337FMk0KhgKaNu3vbR4qUQ7uQqExBMgtBGE/Fk5MTTk5OZtawLYtKucy/X76gUnmE53o4OSMJPMYKO0QKGSvIQnwy93IXX3311c2j1S03EqvnaDSi3+/z9fOv6fV6XLVa6IaRBBIJUq6VDETHLacPeeX0r8ml67r3SgohEBOiw+EQ27axbZtff/0V27LwfR/LuiEq5WTqpuhLJotmma7z3dNNoqoqIEiiJk3T8FyXTqdDp9MhDG+CgVVj8M82dedBUcaEpVRByvE2im1hTh7PZFLuIxNd1ZqrPtUpioICaKqaBBiD4ZBhOJoO1j+vReXUz8Uc7+fG01tBAeUmXIzCCBFF42l7b+QewL2k6dys9OW3nkHyTlJsWZnkx1sx6e9yG3+JXcC0WOeV9ZKAQSKluJM2+5az1+L8rqUvH+9yrLfTkW7qTq03uSBvTpm7uVPZKew0JTzZ7JpdjFYJ4Nepc7eBjPifWqPrYLlFZ1kh5RNN5vK3s5Ql5VJisRjNuMX6opPe+ay70Xobf0/d+5hliQdW17jUVFDwMHZ98KB++SbagrpZop6USp5uz2jh9aKsFF1Y5KPT1Es5sn+v0THSj/A66rrqvbKUT7VGF82O+3lZRefj4u+puwyzrZziUTuD9W8Xz3q8eCnRWQ1nWY9rE8xQ7TYWE51B6NOLTnos2jD7H16jCiqkfihP/dowXdqdElmmeAp0u13+s7PD0dERxWIRy7ZRFYXKo0dYlnX/HBSZxWgV0clGLtkRnGGsMAyJogjLtvF8H9d1yeVyVCqVmQc1IFXAsLpwzLlIXV8uqasoCrVajWfPnlGv1/F9H03TcBwn+dDgLv5yO/VpEQQB5XKZarVKEASoqpq8WF7p5NhdLJP3tX0k83cY4b7cmKaJbds4jjN1DmLeCc/Uu4DLO5iy8MI2Zte9uLhgOBggpcQPAjqdTnJYWRufh3jYg8mfC693d1FVlYN373A9D8uy2N7enis8s7AW0bXVNYXwwPi7mmq1yvb2NkEQYBgGGxsbbGxspD4NvjwEnHf1IOqarl4+n6der/P06VMKhQKqqianQNOe7196huETPEEtheM4FAoFyuVyQnRyIPPhPwdZjAwbWMrk9WCaopOjNbELyfJ92kyiruuyv79Po9EgHI1fwH4Ow8bnBz3Pw7btzCRhDlHf9/n22285ODjg4uKCwUTaPzXiT7cqlcrciCd1W7MISCnlhw8faLfb9Hq9pV8gfGw4joPv+3ieh2EYmSz6X3JKM4ycKLcyAAAAAElFTkSuQmCC";
+
+/***/ }),
+
 /***/ 6772:
 /***/ (function(module) {
 
@@ -1412,7 +1421,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=ced9306c
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=2f48cea4
 
 const _hoisted_1 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -1421,7 +1430,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.imgStyle)
   }, null, 12, _hoisted_1);
 }
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=ced9306c
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=2f48cea4
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=script&lang=js
 
@@ -1453,6 +1462,10 @@ const imgs = __webpack_require__(5675);
     isFolder: {
       type: Boolean,
       required: false
+    },
+    isMulti: {
+      type: Boolean,
+      required: false
     }
   },
   setup(props) {
@@ -1461,15 +1474,15 @@ const imgs = __webpack_require__(5675);
     const icon = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       let suffix = '';
       // 文件夹
-      if (props.isFolder == true) return imgs(base_addr + 'folder.png');else if (props.name && props.name.length > 0) {
+      if (props.isMulti === true) return imgs(base_addr + 'multi.png');else if (props.isFolder === true) return imgs(base_addr + 'folder.png');else if (props.name && props.name.length > 0) {
         // 获取文件名后缀
         let index = props.name.lastIndexOf('.');
         if (index != -1) suffix = props.name.substring(index + 1);else suffix = '';
         try {
-          // 特判 .folder 后缀
-          if (suffix == 'folder') return imgs(base_addr + 'kk.png');else return imgs(base_addr + suffix + '.png');
+          // 特判 .folder/.multi 后缀
+          if (suffix == 'folder' || suffix == 'multi') return imgs(base_addr + 'kk.png');else return imgs(base_addr + suffix + '.png');
         } catch (error) {
-          // 图片不存在
+          // 后缀不存在
           return imgs(base_addr + 'kk.png');
         }
       } else return imgs(base_addr + 'kk.png');
