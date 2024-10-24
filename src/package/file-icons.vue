@@ -5,9 +5,9 @@
 <script>
 import { computed } from 'vue';
 
-// 引入常用图片
+// Import commonly images
 // const imgs = require.context('../assets@min/', false, /\.png$/);
-// 引入全部图片
+// Import all images
 const imgs = require.context('../assets/', false, /\.png$/);
 
 export default {
@@ -42,30 +42,30 @@ export default {
   },
   setup(props) {
   
-    // 根据文件后缀获取图标
+    // Retrieve icons based on file suffixes
     const base_addr = './';
     const icon = computed(() => {
       let suffix = '';
-      // 文件夹
+      // Folder
       if(props.isMulti === true) return imgs(base_addr + 'multi.png');
       else if(props.isFolder === true) return imgs(base_addr + 'folder.png');
       else if(props.name && props.name.length > 0) {
-        // 获取文件名后缀
+        // Get file name suffix
         let index = props.name.lastIndexOf('.');
         if(index != -1) suffix = props.name.substring(index + 1);
         else suffix = '';
         try {
-          // 特判 .folder/.multi 后缀
+          // Special judgment for .folder/.multi suffix
           if(suffix == 'folder' || suffix == 'multi') return imgs(base_addr + 'kk.png');
           else return imgs(base_addr + suffix + '.png');
         } catch(error) {
-          // 后缀不存在
+          // Suffix does not exist
           return imgs(base_addr + 'kk.png');
         }
       }
       else return imgs(base_addr + 'kk.png');
     });
-    // 图标样式
+    // Icon Style
     const imgStyle = computed(() => {
       return {
         width: props.width ? props.width + 'px' : '20px',

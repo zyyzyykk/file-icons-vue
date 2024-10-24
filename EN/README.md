@@ -1,6 +1,6 @@
 # file-icons-vue
 
-> file-icons-vue, a npm dependency package that provides file icons for Vue.js projects.
+> file-icons-vue, a npm package that provides file icons for Vue.js projects.
 >
 > Author: [zyyzyykk](https://github.com/zyyzyykk/)
 >
@@ -10,7 +10,7 @@
 >
 > Update Time: 2024-08-22
 
-<p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
+<p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="http://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/file-icons-vue"><img src="https://img.shields.io/badge/npm_install-1.6k-red" alt="Npm Install"></a>
@@ -60,7 +60,7 @@ export default {
 
 ### 🛸 Preview
 
-![预览](https://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
+![Preview](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
 
 ### 💡 Function Description
 
@@ -79,13 +79,13 @@ export default {
 
 3.All icons included in `file-icons-vue` :
 
-![file-icons-vue的所有图标-1](https://img.kkbapps.com/file-icons-vue/1-1.2.8.png)
+![all-icons-1](http://img.kkbapps.com/file-icons-vue/1-1.2.8.png)
 
-![file-icons-vue的所有图标-2](https://img.kkbapps.com/file-icons-vue/2-1.2.8.png)
+![all-icons-2](http://img.kkbapps.com/file-icons-vue/2-1.2.8.png)
 
 4.Common icons included in `file-icons-vue-min` :
 
-![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.6-min.png)
+![common-icons](http://img.kkbapps.com/file-icons-vue/1.0.6-min.png)
 
 ### 👨‍💻 Update Records
 
