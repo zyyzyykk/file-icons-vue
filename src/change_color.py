@@ -1,4 +1,4 @@
-# 将图片中的纯白与透明进行相互转换
+# Convert the pure white and transparent colors in the image to each other
 import os
 from PIL import Image
 

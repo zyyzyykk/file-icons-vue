@@ -1,4 +1,4 @@
-// 引入封装好的组件
+// Import encapsulated components
 import FileIcons from './file-icons.vue';
 
 export default FileIcons;

@@ -2,8 +2,6 @@
 
 > file-icons-vue，为 Vue.js 项目提供文件图标的npm依赖库
 >
-> file-icons-vue, a npm dependency package that provides file icons for Vue.js projects.
->
 > 作者：[zyyzyykk](https://github.com/zyyzyykk/)
 >
 > 源代码：https://github.com/zyyzyykk/file-icons-vue
@@ -12,7 +10,7 @@
 >
 > 更新时间：2024-08-22
 
-<p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="https://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
+<p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="http://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/file-icons-vue"><img src="https://img.shields.io/badge/npm_install-1.6k-red" alt="Npm Install"></a>
@@ -62,7 +60,7 @@ export default {
 
 ### 🛸 预览
 
-![预览](https://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
+![预览](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview1.png)
 
 ### 💡 功能说明
 
@@ -81,13 +79,13 @@ export default {
 
 3.`file-icons-vue` 包含的全部图标：
 
-![file-icons-vue的所有图标-1](https://img.kkbapps.com/file-icons-vue/1-1.2.8.png)
+![所有图标-1](http://img.kkbapps.com/file-icons-vue/1-1.2.8.png)
 
-![file-icons-vue的所有图标-2](https://img.kkbapps.com/file-icons-vue/2-1.2.8.png)
+![所有图标-2](http://img.kkbapps.com/file-icons-vue/2-1.2.8.png)
 
 4.`file-icons-vue-min` 包含的常用图标：
 
-![file-icons-vue-min的所有图标](https://img.kkbapps.com/file-icons-vue/1.0.6-min.png)
+![常用图标](http://img.kkbapps.com/file-icons-vue/1.0.6-min.png)
 
 ### 👨‍💻 更新记录
 
