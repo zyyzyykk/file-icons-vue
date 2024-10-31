@@ -1,14 +1,20 @@
 <template>
-  <img :src="icon" :style="imgStyle" >
+  <span :style="spanStyle" >
+    <img class="file-icons-vue-img" :src="icon" :style="iconStyle" >
+    <img class="file-icons-vue-img" :src="link" :style="linkStyle" v-if="isLink && !isMulti" >
+  </span>
 </template>
 
 <script>
 import { computed } from 'vue';
 
-// Import commonly images
-// const imgs = require.context('../assets@min/', false, /\.png$/);
-// Import all images
-const imgs = require.context('../assets/', false, /\.png$/);
+// import all images
+// const imgs = require.context('../assets/', false, /\.png$/);
+
+// import common images
+const imgs = require.context('../assets@min/', false, /\.png$/);
+
+import map from "./map";
 
 export default {
   name:'file-icons',
@@ -18,70 +24,119 @@ export default {
     name:{
       type:String,
       required:true,
-      default:''
+      default:'',
     },
     width:{
-      type:String,
+      type:Number,
       required:false,
+      default:20,
     },
     height:{
-      type:String,
+      type:Number,
       required:false,
+      default:20,
     },
     style:{
       type:Object,
+      required:false,
+      default:() => {return {}}
     },
     isFolder:{
       type:Boolean,
       required:false,
+      default:false,
     },
     isMulti:{
       type:Boolean,
       required:false,
+      default:false,
+    },
+    isLink:{
+      type:Boolean,
+      required:false,
+      default:false,
     },
   },
   setup(props) {
-  
-    // Retrieve icons based on file suffixes
     const base_addr = './';
+
+    // retrieve icons based on file suffixes
     const icon = computed(() => {
-      let suffix = '';
-      // Folder
+      // multi
       if(props.isMulti === true) return imgs(base_addr + 'multi.png');
-      else if(props.isFolder === true) return imgs(base_addr + 'folder.png');
-      else if(props.name && props.name.length > 0) {
-        // Get file name suffix
+      // folder
+      if(props.isFolder === true) return imgs(base_addr + 'folder.png');
+      // file
+      let suffix = '';
+      if(props.name && props.name.length > 0) {
+        // get file name suffix
         let index = props.name.lastIndexOf('.');
-        if(index != -1) suffix = props.name.substring(index + 1);
+        if(index != -1) suffix = props.name.substring(index + 1).toLowerCase();
         else suffix = '';
         try {
-          // Special judgment for .folder/.multi suffix
-          if(suffix == 'folder' || suffix == 'multi') return imgs(base_addr + 'kk.png');
-          else return imgs(base_addr + suffix + '.png');
+          if(map[suffix]) return imgs(base_addr + map[suffix] + '.png');
+          else return imgs(base_addr + 'kk.png');
         } catch(error) {
-          // Suffix does not exist
+          // png does not exist
           return imgs(base_addr + 'kk.png');
         }
       }
-      else return imgs(base_addr + 'kk.png');
+      return imgs(base_addr + 'kk.png');
     });
-    // Icon Style
-    const imgStyle = computed(() => {
+
+    // icon style
+    const iconStyle = computed(() => {
       return {
-        width: props.width ? props.width + 'px' : '20px',
-        height: props.height ? props.height + 'px' : '20px',
         ...props.style,
+        width:props.width + 'px',
+        height:props.height + 'px',
+      }
+    });
+
+    // link icon
+    const link = computed(() => {      
+      return imgs(base_addr + 'link.png');
+    });
+
+    // link style
+    const linkStyle = computed(() => {
+      return {
+        position:'absolute',
+        top:'0px',
+        left:'0px',
+        width:props.width + 'px',
+        height:props.height + 'px',
+      }
+    });
+
+    // span style
+    const spanStyle = computed(() => {
+      return {
+        position:'relative',
+        display:'inline-block',
+        width:props.width + 'px',
+        height:props.height + 'px',
       }
     });
   
     return {
       icon,
-      imgStyle,
+      iconStyle,
+      link,
+      linkStyle,
+      spanStyle,
     }
   },
 }
 </script>
 
 <style scoped>
-
+/* forbid dragging images */
+.file-icons-vue-img {
+  user-select: none;
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Konqueror HTML */
+  -moz-user-drag: none; /* Firefox */
+  -o-user-drag: none; /* Opera */
+}
 </style>

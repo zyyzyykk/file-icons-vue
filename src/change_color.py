@@ -1,4 +1,4 @@
-# Convert the pure white and transparent colors in the image to each other
+# convert the pure white and transparent colors in the image to each other
 import os
 from PIL import Image
 

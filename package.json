@@ -42,7 +42,7 @@
     "not dead",
     "not ie 11"
   ],
-  "description": "file-icons-vue, a npm package that provides file icons for Vue.js projects.",
+  "description": "file-icons-vue, a npm package that provides file icons for Vue.js projects",
   "main": "babel.config.js",
   "keywords": [],
   "author": "",

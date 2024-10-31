@@ -1,5 +1,9 @@
 ### 👨‍💻 History Update Records
 
+##### file-icons-vue@1.2.5:
+
+Add `.dtd`、`.ppa`、`.pwz`、`.ras`、`.vdx`、`.vsd`、`.wiz`、`.wmv`、`.wsdl`、`.xhtml`、`.xsl` icons
+
 ##### file-icons-vue@1.2.2:
 
 The props parameter becomes responsive, for example, it automatically changes to the corresponding icon when the file name changes
