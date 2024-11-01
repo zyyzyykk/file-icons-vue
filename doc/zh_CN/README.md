@@ -8,7 +8,7 @@
 >
 > npm地址：https://www.npmjs.com/package/file-icons-vue
 >
-> 更新时间：2024-10-31
+> 更新时间：2024-11-01
 
 <p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="http://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
@@ -39,7 +39,7 @@ npm i file-icons-vue-min
   <FileIcons 
      name="text.txt" :width="30" :height="30" 
      :isFolder="false" :isMulti="false" :isLink="false" 
-     :style="{'float':'right'}" 
+     :iconStyle="{opacity: 0.5}" 
   />
 </template>
 
@@ -61,7 +61,7 @@ export default {
 
 ### 🛸 预览
 
-![预览](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview-1.3.1.png)
+![预览](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview-1.3.2.png)
 
 ### 💡 功能说明
 
@@ -69,19 +69,25 @@ export default {
 
 2.组件接收的props参数：
 
-| 参数名   | 类型    | 含义           | 说明                                                  |
-| -------- | ------- | -------------- | ----------------------------------------------------- |
-| name     | String  | 文件全名称     | 必传                                                  |
-| width    | Number  | 图标宽度（px） | 默认值为20（px）                                      |
-| height   | Number  | 图标高度（px） | 默认值为20（px）                                      |
-| style    | Object  | 图标自定义样式 | 对象中的宽高属性不生效（会被上面的width、height覆盖） |
-| isFolder | Boolean | 是否为文件夹   | 默认值为false                                         |
-| isMulti  | Boolean | 是否为多文件   | 默认值为false                                         |
-| isLink   | Boolean | 是否为引用文件 | 默认值为false                                         |
+| 参数名    | 类型    | 含义                 | 说明                   |
+| --------- | ------- | -------------------- | ---------------------- |
+| name      | String  | 文件全名称           | 必传                   |
+| width     | Number  | 图标宽度（px）       | 默认值为20（px）       |
+| height    | Number  | 图标高度（px）       | 默认值为20（px）       |
+| iconStyle | Object  | 文件图标自定义样式   | 对象中的宽高属性不生效 |
+| linkStyle | Object  | 引用图标自定义样式   | 对象中的宽高属性不生效 |
+| style     | Object  | 图标父元素自定义样式 | 对象中的宽高属性不生效 |
+| isFolder  | Boolean | 是否为文件夹         | 默认值为false          |
+| isMulti   | Boolean | 是否为多文件         | 默认值为false          |
+| isLink    | Boolean | 是否为引用文件       | 默认值为false          |
 
 ### 👨‍💻 更新记录
 
-##### file-icons-vue@1.3.1 ：latest
+##### file-icons-vue@1.3.2 ：latest
+
+- 新增 `iconStyle`、`linkStyle` 属性，修改 `style` 属性含义
+
+##### file-icons-vue@1.3.1 ：
 
 - 新增 `isLink` 属性，支持引用类型文件显示
 - 去除重复图标，减小打包体积
@@ -94,10 +100,6 @@ export default {
 ##### file-icons-vue@1.2.7 ：
 
 新增 `.dot`、`.env`、`.mk`、`.tgz` 图标
-
-##### file-icons-vue@1.2.6 ：
-
-纠正组件props参数的拼写错误：由 isFloder 修改为 **isFolder**
 
 [**历史更新记录**](./UPDATE.md)
 

@@ -8,7 +8,7 @@
 >
 > Npm Address: https://www.npmjs.com/package/file-icons-vue
 >
-> Update Time: 2024-10-31
+> Update Time: 2024-11-01
 
 <p align="center"><a href="https://www.npmjs.com/package/file-icons-vue" target="_blank" rel="noopener noreferrer"><img width="100" src="http://img.kkbapps.com/logo/file-icons-vue.png" alt="file-icons-vue logo"></a></p>
 
@@ -39,7 +39,7 @@ npm i file-icons-vue-min
   <FileIcons 
      name="text.txt" :width="30" :height="30" 
      :isFolder="false" :isMulti="false" :isLink="false" 
-     :style="{'float':'right'}" 
+     :iconStyle="{opacity: 0.5}" 
   />
 </template>
 
@@ -61,7 +61,7 @@ export default {
 
 ### 🛸 Preview
 
-![Preview](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview-1.3.1.png)
+![Preview](http://img.kkbapps.com/file-icons-vue/file-icons-vue-preview-1.3.2.png)
 
 ### 💡 Function Description
 
@@ -69,19 +69,25 @@ export default {
 
 2.The props parameters received by the component:
 
-| Parameter | Type    | Meaning              | Description                                                  |
-| --------- | ------- | -------------------- | ------------------------------------------------------------ |
-| name      | String  | Full file name       | Must be transmitted                                          |
-| width     | Number  | Icon width (px)      | Default value is 20 (px)                                     |
-| height    | Number  | Icon height (px)     | Default value is 20 (px)                                     |
-| style     | Object  | Icon custom style    | The width and height attributes in the object do not take effect (will be overwritten by the width and height above) |
-| isFolder  | Boolean | Is it a folder       | Default value is false                                       |
-| isMulti   | Boolean | Is it multiple files | Default value is false                                       |
-| isLink    | Boolean | Is it linked file    | Default value is false                                       |
+| Parameter | Type    | Meaning                          | Description                                                  |
+| --------- | ------- | -------------------------------- | ------------------------------------------------------------ |
+| name      | String  | Full file name                   | Must be transmitted                                          |
+| width     | Number  | Icon width (px)                  | Default value is 20 (px)                                     |
+| height    | Number  | Icon height (px)                 | Default value is 20 (px)                                     |
+| iconStyle | Object  | File Icon custom style           | The width and height attributes in the object do not take effect |
+| linkStyle | Object  | File Iink custom style           | The width and height attributes in the object do not take effect |
+| style     | Object  | Icon parent element custom style | The width and height attributes in the object do not take effect |
+| isFolder  | Boolean | Is it a folder                   | Default value is false                                       |
+| isMulti   | Boolean | Is it multiple files             | Default value is false                                       |
+| isLink    | Boolean | Is it linked file                | Default value is false                                       |
 
 ### 👨‍💻 Update Records
 
-##### file-icons-vue@1.3.1: latest
+##### file-icons-vue@1.3.2: latest
+
+- Add `iconStyle`、`linkStyle` attribute, Modify the meaning of `style` attribute
+
+##### file-icons-vue@1.3.1: 
 
 - Add `isLink` attribute, supports displaying reference type files
 - Remove duplicate icons and reduce packaging volume
@@ -94,10 +100,6 @@ Add `isMulti` attribute, supporting multi file display
 ##### file-icons-vue@1.2.7:
 
 Add `.dot`、`.env`、`.mk`、`.tgz` icons
-
-##### file-icons-vue@1.2.6:
-
-Correcting spelling errors in the props parameter of the component: changing from isFloder to **isFolder**
 
 [**History Update Records**](./doc/en_US/UPDATE.md)
 

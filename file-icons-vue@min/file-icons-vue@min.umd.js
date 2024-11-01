@@ -719,26 +719,26 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=7bcca726&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=93dfc5a4&scoped=true
 
-const _withScopeId = n => (_pushScopeId("data-v-7bcca726"), n = n(), _popScopeId(), n);
+const _withScopeId = n => (_pushScopeId("data-v-93dfc5a4"), n = n(), _popScopeId(), n);
 const _hoisted_1 = ["src"];
 const _hoisted_2 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("span", {
-    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.spanStyle)
+    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.computedSpanStyle)
   }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("img", {
     class: "file-icons-vue-img",
     src: $setup.icon,
-    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.iconStyle)
+    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.computedIconStyle)
   }, null, 12, _hoisted_1), $props.isLink && !$props.isMulti ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("img", {
     key: 0,
     class: "file-icons-vue-img",
     src: $setup.link,
-    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.linkStyle)
+    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)($setup.computedLinkStyle)
   }, null, 12, _hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)], 4);
 }
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=7bcca726&scoped=true
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=93dfc5a4&scoped=true
 
 ;// CONCATENATED MODULE: ./src/package/map.js
 /* harmony default export */ var map = ({
@@ -915,6 +915,20 @@ const imgs = __webpack_require__(5435);
         return {};
       }
     },
+    iconStyle: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {};
+      }
+    },
+    linkStyle: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {};
+      }
+    },
     isFolder: {
       type: Boolean,
       required: false,
@@ -932,6 +946,15 @@ const imgs = __webpack_require__(5435);
     }
   },
   setup(props) {
+    // width
+    const computedWidth = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+      return Number.isInteger(props.width) && props.width > 0 ? props.width : 20;
+    });
+
+    // height
+    const computedHeight = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+      return Number.isInteger(props.height) && props.height > 0 ? props.height : 20;
+    });
     const base_addr = './';
 
     // retrieve icons based on file suffixes
@@ -957,11 +980,11 @@ const imgs = __webpack_require__(5435);
     });
 
     // icon style
-    const iconStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+    const computedIconStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       return {
-        ...props.style,
-        width: props.width + 'px',
-        height: props.height + 'px'
+        ...props.iconStyle,
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px'
       };
     });
 
@@ -971,40 +994,42 @@ const imgs = __webpack_require__(5435);
     });
 
     // link style
-    const linkStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+    const computedLinkStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       return {
+        ...props.linkStyle,
         position: 'absolute',
         top: '0px',
         left: '0px',
-        width: props.width + 'px',
-        height: props.height + 'px'
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px'
       };
     });
 
     // span style
-    const spanStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+    const computedSpanStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
       return {
-        position: 'relative',
         display: 'inline-block',
-        width: props.width + 'px',
-        height: props.height + 'px'
+        ...props.style,
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px',
+        position: 'relative'
       };
     });
     return {
       icon,
-      iconStyle,
+      computedIconStyle,
       link,
-      linkStyle,
-      spanStyle
+      computedLinkStyle,
+      computedSpanStyle
     };
   }
 });
 ;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=style&index=0&id=7bcca726&scoped=true&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=style&index=0&id=93dfc5a4&scoped=true&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=style&index=0&id=7bcca726&scoped=true&lang=css
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=style&index=0&id=93dfc5a4&scoped=true&lang=css
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(1620);
@@ -1016,7 +1041,7 @@ var exportHelper = __webpack_require__(1620);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(file_iconsvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-7bcca726"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(file_iconsvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-93dfc5a4"]])
 
 /* harmony default export */ var file_icons = (__exports__);
 ;// CONCATENATED MODULE: ./src/package/index.js

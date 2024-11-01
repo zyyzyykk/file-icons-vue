@@ -1,5 +1,9 @@
 ### 👨‍💻 History Update Records
 
+##### file-icons-vue@1.2.6:
+
+Correcting spelling errors in the props parameter of the component: changing from isFloder to **isFolder**
+
 ##### file-icons-vue@1.2.5:
 
 Add `.dtd`、`.ppa`、`.pwz`、`.ras`、`.vdx`、`.vsd`、`.wiz`、`.wmv`、`.wsdl`、`.xhtml`、`.xsl` icons

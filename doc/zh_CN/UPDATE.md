@@ -1,5 +1,9 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.6 ：
+
+纠正组件props参数的拼写错误：由 isFloder 修改为 **isFolder**
+
 ##### file-icons-vue@1.2.5 ：
 
 新增 `.dtd`、`.ppa`、`.pwz`、`.ras`、`.vdx`、`.vsd`、`.wiz`、`.wmv`、`.wsdl`、`.xhtml`、`.xsl` 图标

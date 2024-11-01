@@ -1,7 +1,7 @@
 <template>
-  <span :style="spanStyle" >
-    <img class="file-icons-vue-img" :src="icon" :style="iconStyle" >
-    <img class="file-icons-vue-img" :src="link" :style="linkStyle" v-if="isLink && !isMulti" >
+  <span :style="computedSpanStyle" >
+    <img class="file-icons-vue-img" :src="icon" :style="computedIconStyle" >
+    <img class="file-icons-vue-img" :src="link" :style="computedLinkStyle" v-if="isLink && !isMulti" >
   </span>
 </template>
 
@@ -41,6 +41,16 @@ export default {
       required:false,
       default:() => {return {}}
     },
+    iconStyle:{
+      type:Object,
+      required:false,
+      default:() => {return {}}
+    },
+    linkStyle:{
+      type:Object,
+      required:false,
+      default:() => {return {}}
+    },
     isFolder:{
       type:Boolean,
       required:false,
@@ -58,6 +68,17 @@ export default {
     },
   },
   setup(props) {
+
+    // width
+    const computedWidth = computed(() => {
+      return (Number.isInteger(props.width) && props.width > 0) ? props.width : 20;
+    });
+
+    // height
+    const computedHeight = computed(() => {
+      return (Number.isInteger(props.height) && props.height > 0) ? props.height : 20;
+    });
+
     const base_addr = './';
 
     // retrieve icons based on file suffixes
@@ -85,11 +106,11 @@ export default {
     });
 
     // icon style
-    const iconStyle = computed(() => {
+    const computedIconStyle = computed(() => {
       return {
-        ...props.style,
-        width:props.width + 'px',
-        height:props.height + 'px',
+        ...props.iconStyle,
+        width:computedWidth.value + 'px',
+        height:computedHeight.value + 'px',
       }
     });
 
@@ -99,32 +120,34 @@ export default {
     });
 
     // link style
-    const linkStyle = computed(() => {
+    const computedLinkStyle = computed(() => {
       return {
+        ...props.linkStyle,
         position:'absolute',
         top:'0px',
         left:'0px',
-        width:props.width + 'px',
-        height:props.height + 'px',
+        width:computedWidth.value + 'px',
+        height:computedHeight.value + 'px',
       }
     });
 
     // span style
-    const spanStyle = computed(() => {
+    const computedSpanStyle = computed(() => {
       return {
-        position:'relative',
         display:'inline-block',
-        width:props.width + 'px',
-        height:props.height + 'px',
+        ...props.style,
+        width:computedWidth.value + 'px',
+        height:computedHeight.value + 'px',
+        position:'relative',
       }
     });
   
     return {
       icon,
-      iconStyle,
+      computedIconStyle,
       link,
-      linkStyle,
-      spanStyle,
+      computedLinkStyle,
+      computedSpanStyle,
     }
   },
 }
