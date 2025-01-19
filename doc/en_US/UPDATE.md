@@ -1,5 +1,9 @@
 ### 👨‍💻 History Update Records
 
+##### file-icons-vue@1.2.7:
+
+Add `.dot`、`.env`、`.mk`、`.tgz` icons
+
 ##### file-icons-vue@1.2.6:
 
 Correcting spelling errors in the props parameter of the component: changing from isFloder to **isFolder**

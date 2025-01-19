@@ -1,5 +1,5 @@
 <template>
-  <span :style="computedSpanStyle" >
+  <span :style="computedItemStyle" >
     <img class="file-icons-vue-img" :src="icon" :style="computedIconStyle" >
     <img class="file-icons-vue-img" :src="link" :style="computedLinkStyle" v-if="isLink && !isMulti" >
   </span>
@@ -37,6 +37,11 @@ export default {
       default:20,
     },
     style:{
+      type:Object,
+      required:false,
+      default:() => {return {}}
+    },
+    itemStyle:{
       type:Object,
       required:false,
       default:() => {return {}}
@@ -131,10 +136,11 @@ export default {
       }
     });
 
-    // span style
-    const computedSpanStyle = computed(() => {
+    // item style
+    const computedItemStyle = computed(() => {
       return {
         display:'inline-block',
+        ...props.itemStyle,
         ...props.style,
         width:computedWidth.value + 'px',
         height:computedHeight.value + 'px',
@@ -147,7 +153,7 @@ export default {
       computedIconStyle,
       link,
       computedLinkStyle,
-      computedSpanStyle,
+      computedItemStyle,
     }
   },
 }

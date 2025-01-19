@@ -1,5 +1,9 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.7 ：
+
+新增 `.dot`、`.env`、`.mk`、`.tgz` 图标
+
 ##### file-icons-vue@1.2.6 ：
 
 纠正组件props参数的拼写错误：由 isFloder 修改为 **isFolder**
