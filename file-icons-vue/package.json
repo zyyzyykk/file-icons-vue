@@ -1,20 +1,30 @@
 {
   "name": "file-icons-vue",
-  "version": "1.3.4",
-  "description": "file-icons-vue, a file icons npm package for Vue projects",
+  "version": "1.3.5",
+  "description": "A file icons package for Vue3 projects",
   "main": "file-icons-vue.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["vue","file","icons","icon","vue3","npm"],
+  "keywords": [
+    "file",
+    "icons",
+    "icon",
+    "vue3",
+    "npm",
+    "vue"
+  ],
   "author": "zyyzyykk",
+  "license": "Apache-2.0",
+  "directories": {
+    "doc": "doc"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zyyzyykk/file-icons-vue.git"
+    "url": "git+https://github.com/zyyzyykk/file-icons-vue.git"
   },
   "bugs": {
     "url": "https://github.com/zyyzyykk/file-icons-vue/issues"
   },
-  "homepage": "https://github.com/zyyzyykk/file-icons-vue",
-  "license": "ISC"
+  "homepage": "https://github.com/zyyzyykk/file-icons-vue"
 }

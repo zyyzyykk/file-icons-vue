@@ -9,67 +9,67 @@
 import { computed } from 'vue';
 
 // import all images
-// const imgs = require.context('../assets/', false, /\.png$/);
+const imgs = require.context('../assets/', false, /\.png$/);
 
 // import common images
-const imgs = require.context('../assets@min/', false, /\.png$/);
+// const imgs = require.context('../assets@min/', false, /\.png$/);
 
 import map from "./map";
 
 export default {
-  name:'file-icons',
+  name: 'file-icons',
   components: {
   },
   props: {
-    name:{
-      type:String,
-      required:true,
-      default:'',
+    name: {
+      type: String,
+      required: true,
+      default: '',
     },
-    width:{
-      type:Number,
-      required:false,
-      default:20,
+    width: {
+      type: Number,
+      required: false,
+      default: 20,
     },
-    height:{
-      type:Number,
-      required:false,
-      default:20,
+    height: {
+      type: Number,
+      required: false,
+      default: 20,
     },
-    style:{
-      type:Object,
-      required:false,
-      default:() => {return {}}
+    style: {
+      type: Object,
+      required: false,
+      default: () => { return {} },
     },
-    itemStyle:{
-      type:Object,
-      required:false,
-      default:() => {return {}}
+    itemStyle: {
+      type: Object,
+      required: false,
+      default:() => { return {} },
     },
-    iconStyle:{
-      type:Object,
-      required:false,
-      default:() => {return {}}
+    iconStyle: {
+      type: Object,
+      required: false,
+      default: () => { return {} },
     },
-    linkStyle:{
-      type:Object,
-      required:false,
-      default:() => {return {}}
+    linkStyle: {
+      type: Object,
+      required: false,
+      default: () => { return {} },
     },
-    isFolder:{
-      type:Boolean,
-      required:false,
-      default:false,
+    isFolder: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
-    isMulti:{
-      type:Boolean,
-      required:false,
-      default:false,
+    isMulti: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
-    isLink:{
-      type:Boolean,
-      required:false,
-      default:false,
+    isLink: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   setup(props) {
@@ -93,12 +93,10 @@ export default {
       // folder
       if(props.isFolder === true) return imgs(base_addr + 'folder.png');
       // file
-      let suffix = '';
       if(props.name && props.name.length > 0) {
         // get file name suffix
-        let index = props.name.lastIndexOf('.');
-        if(index != -1) suffix = props.name.substring(index + 1).toLowerCase();
-        else suffix = '';
+        const index = props.name.lastIndexOf('.');
+        const suffix = (index !== -1) ? props.name.substring(index + 1).toLowerCase() : '';
         try {
           if(map[suffix]) return imgs(base_addr + map[suffix] + '.png');
           else return imgs(base_addr + 'kk.png');
@@ -114,13 +112,13 @@ export default {
     const computedIconStyle = computed(() => {
       return {
         ...props.iconStyle,
-        width:computedWidth.value + 'px',
-        height:computedHeight.value + 'px',
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px',
       }
     });
 
     // link icon
-    const link = computed(() => {      
+    const link = computed(() => {
       return imgs(base_addr + 'link.png');
     });
 
@@ -128,26 +126,26 @@ export default {
     const computedLinkStyle = computed(() => {
       return {
         ...props.linkStyle,
-        position:'absolute',
-        top:'0px',
-        left:'0px',
-        width:computedWidth.value + 'px',
-        height:computedHeight.value + 'px',
+        position: 'absolute',
+        top: '0px',
+        left: '0px',
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px',
       }
     });
 
     // item style
     const computedItemStyle = computed(() => {
       return {
-        display:'inline-block',
+        display: 'inline-block',
         ...props.itemStyle,
         ...props.style,
-        width:computedWidth.value + 'px',
-        height:computedHeight.value + 'px',
-        position:'relative',
+        width: computedWidth.value + 'px',
+        height: computedHeight.value + 'px',
+        position: 'relative',
       }
     });
-  
+
     return {
       icon,
       computedIconStyle,
@@ -163,9 +161,6 @@ export default {
 /* forbid dragging images */
 .file-icons-vue-img {
   user-select: none;
-  -webkit-user-drag: none; /* Safari */
-  -khtml-user-drag: none; /* Konqueror HTML */
-  -moz-user-drag: none; /* Firefox */
-  -o-user-drag: none; /* Opera */
+  -webkit-user-drag: none;
 }
 </style>

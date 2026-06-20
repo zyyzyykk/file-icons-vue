@@ -1,5 +1,9 @@
 ### 👨‍💻 History Update Records
 
+##### file-icons-vue@1.2.8:
+
+Add `isMulti` attribute, supporting multi file display
+
 ##### file-icons-vue@1.2.7:
 
 Add `.dot`、`.env`、`.mk`、`.tgz` icons

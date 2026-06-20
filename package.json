@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "package": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue --dest file-icons-vue",
-    "package@min": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue@min --dest file-icons-vue@min"
+    "package@min": "vue-cli-service build --target lib ./src/package/index.js --name file-icons-vue-min --dest file-icons-vue-min"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -42,9 +42,27 @@
     "not dead",
     "not ie 11"
   ],
-  "description": "file-icons-vue, a file icons npm package for Vue projects",
+  "description": "A file icons package for Vue3 projects",
   "main": "babel.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "file",
+    "icons",
+    "icon",
+    "vue3",
+    "npm",
+    "vue"
+  ],
+  "author": "zyyzyykk",
+  "license": "Apache-2.0",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyzyykk/file-icons-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyyzyykk/file-icons-vue/issues"
+  },
+  "homepage": "https://github.com/zyyzyykk/file-icons-vue"
 }

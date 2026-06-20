@@ -1,5 +1,9 @@
 ### 👨‍💻 历史更新记录
 
+##### file-icons-vue@1.2.8 ：
+
+新增 `isMulti` 属性，支持多文件显示
+
 ##### file-icons-vue@1.2.7 ：
 
 新增 `.dot`、`.env`、`.mk`、`.tgz` 图标

@@ -1061,9 +1061,9 @@ if (typeof window !== 'undefined') {
 
 ;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=ab08a164&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=template&id=959dad56&scoped=true
 
-const _withScopeId = n => (_pushScopeId("data-v-ab08a164"), n = n(), _popScopeId(), n);
+const _withScopeId = n => (_pushScopeId("data-v-959dad56"), n = n(), _popScopeId(), n);
 const _hoisted_1 = ["src"];
 const _hoisted_2 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -1080,7 +1080,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)($setup.computedLinkStyle)
   }, null, 12, _hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 4);
 }
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=ab08a164&scoped=true
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=template&id=959dad56&scoped=true
 
 ;// CONCATENATED MODULE: ./src/package/map.js
 /* harmony default export */ var map = ({
@@ -1318,11 +1318,10 @@ const imgs = __webpack_require__(5675);
       // folder
       if (props.isFolder === true) return imgs(base_addr + 'folder.png');
       // file
-      let suffix = '';
       if (props.name && props.name.length > 0) {
         // get file name suffix
-        let index = props.name.lastIndexOf('.');
-        if (index != -1) suffix = props.name.substring(index + 1).toLowerCase();else suffix = '';
+        const index = props.name.lastIndexOf('.');
+        const suffix = index !== -1 ? props.name.substring(index + 1).toLowerCase() : '';
         try {
           if (map[suffix]) return imgs(base_addr + map[suffix] + '.png');else return imgs(base_addr + 'kk.png');
         } catch (error) {
@@ -1381,10 +1380,10 @@ const imgs = __webpack_require__(5675);
 });
 ;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=style&index=0&id=ab08a164&scoped=true&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/package/file-icons.vue?vue&type=style&index=0&id=959dad56&scoped=true&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=style&index=0&id=ab08a164&scoped=true&lang=css
+;// CONCATENATED MODULE: ./src/package/file-icons.vue?vue&type=style&index=0&id=959dad56&scoped=true&lang=css
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -1396,7 +1395,7 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(file_iconsvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-ab08a164"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(file_iconsvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-959dad56"]])
 
 /* harmony default export */ var file_icons = (__exports__);
 ;// CONCATENATED MODULE: ./src/package/index.js
@@ -1413,4 +1412,3 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(file_iconsvue_t
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=file-icons-vue.common.js.map
